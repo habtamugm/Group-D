@@ -1,0 +1,13 @@
+#%RAML 1.0 Library
+types:
+  product:  !include Datatypes/product.raml
+  order:  !include Datatypes/order.raml
+  category: !include Datatypes/category.raml
+  user: !include Datatypes/user.raml
+securitySchemes:
+  basic: !include Security/basic.raml
+  oath: !include Security/oauth.raml
+traits:
+  responses: !include treats/responses.raml
+resourceTypes:
+   postresource: !include resourceType/postresourceType.raml

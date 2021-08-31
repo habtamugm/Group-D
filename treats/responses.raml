@@ -1,0 +1,26 @@
+#%RAML 1.0 Trait
+responses:
+  400:
+
+  404:
+    body:
+          application/json:
+            example:
+              {
+                "mesg.": this resource is not found,
+              }
+  500:
+    body:
+          application/json:
+            example:
+              {
+                "mesg.": internal server error,
+              }
+  201:
+    body:
+      application/json:
+        example:
+          {
+            "mesg.": "created"
+          }
+

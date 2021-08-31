@@ -1,0 +1,156 @@
+#%RAML 1.0
+title: craft-online-shoping-API
+uses:
+  lib: library.raml
+version: 1.0.0
+/products:
+  description: get all list of the product info,
+  get:
+    queryParameters:
+      name:
+        type: string
+        description: the name of the product
+        maxLength: 10
+        required: false
+        example: dell
+      productid:
+        type: integer
+        description: the id of the product
+        required: false
+        example: 7
+    headers:
+      session:
+        description: connction sesstion is stord
+        type: string
+        required: false
+    responses:
+      200:
+        body:
+          application/json:
+            type: lib.product[]
+            example: !include Example/Products.raml
+  is:
+    - lib.responses:
+
+  /{productid}:
+    get:
+      responses:
+         200:
+           body:
+             application/json:
+               type: lib.product
+               example: !include Example/Product.raml
+/orders:
+  post: 
+    queryParameters:
+        name:
+          type: string
+          description: get the name of the order
+          maxLength: 20
+          minLength: 3
+          required: false
+          example: toshiba
+        id:
+          type: integer
+          description: get the id of the order
+          required: false
+          example: 6
+    headers:
+      sesstion:
+        description: connction sesstion is stord
+        type: string
+        required: false
+    responses:
+      200:
+        body:
+          application/json:
+            type: lib.order[]
+            example:  !include Example/Orders.raml
+  is:
+    - lib.responses: 
+
+/categories:
+   get:
+    queryParameters:
+        name:
+          type: string
+          description: get the name of the categories
+          maxLength: 50
+          minLength: 3
+          required: false
+          example: toshiba
+        id:
+          type: string
+          description: get the id of the category
+          required: false
+          example: "6"
+    headers:
+      sesstion:
+        description: connction sesstion is stord
+        type: string
+        required: false
+    responses:
+      200:
+        body:
+          application/json:
+            type: lib.category[]
+            example: !include Example/Categories.raml
+    is:
+      - lib.responses:
+/users:
+  get:
+    description: "userid created"
+    body:
+        application/json:
+            examples:
+          
+              {  user: "abebe",
+                email: "abebe@yahoo.com"
+              }
+              
+    responses:
+          201:
+            body:
+              application/json:
+                example:
+                  {
+                    mesg.: "userid 1234"
+                  }
+
+  /{userid}:
+    get:
+      responses:
+       200:
+        body:
+          application/json:
+            type: lib.user
+            example: !include Example/Userid.raml
+  is:
+    - lib.responses:
+     
+/order:
+  post:
+    # description: "user order products"
+    body:
+        application/json:
+            examples: !include Example/order.raml
+        
+    responses:
+          201:
+            body:
+              application/json:
+                example:
+                  {
+                 mesg.: "order is created"
+                  }
+  /{orderid}:
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              type: lib.order
+              example: !include Example/Order.raml           
+
+
+        

@@ -1,0 +1,257 @@
+#%RAML 1.0 Extension
+extends:  craft2.raml
+description: for admin task
+/products:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              [{
+                         [{
+                "productId": 1,
+                "catagoryId": 13,
+                "price": 4000,
+                "description": "cor i 3",
+                "name": "hp",
+                "video": "www.dell.com"
+              },{
+                "productId": 1,
+                "catagoryId": 13,
+                "price": 4000,
+                "description": "cor i 3",
+                "name": "hp",
+                "video": "www.dell.com"
+              },{
+                "productId": 1,
+                "catagoryId": 13,
+                "price": 4000,
+                "description": "cor i 3",
+                "name": "hp",
+                "video": "www.dell.com"
+              }
+              ]
+              }]
+  post:
+    responses:
+      201:
+        body:
+          application/json:
+            example:
+              [{
+                        [{
+                "productId": 1,
+                "catagoryId": 13,
+                "price": 4000,
+                "description": "cor i 3",
+                "name": "hp",
+                "video": "www.dell.com"
+              },{
+                "productId": 1,
+                "catagoryId": 13,
+                "price": 4000,
+                "description": "cor i 3",
+                "name": "hp",
+                "video": "www.dell.com"
+              },{
+                "productId": 1,
+                "catagoryId": 13,
+                "price": 4000,
+                "description": "cor i 3",
+                "name": "hp",
+                "video": "www.dell.com"
+              }
+              ]
+              }]
+  put:
+    responses:
+      201:
+        body:
+          application/json:
+            example:
+                [{
+                        [{
+                "productId": 1,
+                "catagoryId": 13,
+                "price": 4000,
+                "description": "cor i 3",
+                "name": "hp",
+                "video": "www.dell.com"
+              },{
+                "productId": 1,
+                "catagoryId": 13,
+                "price": 4000,
+                "description": "cor i 3",
+                "name": "hp",
+                "video": "www.dell.com"
+              },{
+                "productId": 1,
+                "catagoryId": 13,
+                "price": 4000,
+                "description": "cor i 3",
+                "name": "hp",
+                "video": "www.dell.com"
+              }
+              ]
+              }]
+             
+  delete:
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              [{
+                        [{
+                "productId": 1,
+                "catagoryId": 13,
+                "price": 4000,
+                "description": "cor i 3",
+                "name": "hp",
+                "video": "www.dell.com"
+              },{
+                "productId": 1,
+                "catagoryId": 13,
+                "price": 4000,
+                "description": "cor i 3",
+                "name": "hp",
+                "video": "www.dell.com"
+              },{
+                "productId": 1,
+                "catagoryId": 13,
+                "price": 4000,
+                "description": "cor i 3",
+                "name": "hp",
+                "video": "www.dell.com"
+              }
+              ]
+              }]
+  /{productId}:
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              example:
+               {
+                "productId": 1,
+                "catagoryId": 13,
+                "price": 4000,
+                "description": "cor i 3",
+                "name": "hp",
+                "video": "www.dell.com"
+               }
+    post:
+       responses:
+        201:
+          body:
+            application/json:
+              example:
+                {
+                      {
+                "productId": 1,
+                "catagoryId": 13,
+                "price": 4000,
+                "description": "cor i 3",
+                "name": "hp",
+                "video": "www.dell.com"
+               }
+                }
+    put:
+       responses:
+        201:
+          body:
+            application/json:
+              example:
+                {
+                      {
+                "productId": 1,
+                "catagoryId": 13,
+                "price": 4000,
+                "description": "cor i 3",
+                "name": "hp",
+                "video": "www.dell.com"
+               }
+                }
+    delete:
+       responses:
+        200:
+          body:
+            application/json:
+              example:
+                {
+                      {
+                "productId": 1,
+                "catagoryId": 13,
+                "price": 4000,
+                "description": "cor i 3",
+                "name": "hp",
+                "video": "www.dell.com"
+               }
+                }
+/users:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              [{
+                
+                userName: "jhon",
+               email: "jhon123@gmail.com"
+              }]
+  post:
+    responces: 
+  delete:
+    responses:
+      200:
+        body: 
+          application/json:
+            example:
+              [{
+                userName: "jhon",
+                email: "jhon123@gmail.com"
+              }]
+  /{user}:
+    get:
+       responses:
+        200:
+          body:
+            application/json:
+              example:
+                {
+                  userName: "jhon",
+                  email: "jhon123@gmail.com"
+                }
+    post:
+       responses:
+        201:
+          body:
+            application/json:
+              example:
+                {
+                  userName: "jhon",
+                   email: "jhon123@gmail.com"
+                }
+    put:
+       responses:
+        200:
+          body:
+            application/json:
+              example:
+                {
+                  userName: "jhon",
+                    email: "jhon123@gmail.com"
+                }
+    delete:
+       responses:
+        200:
+          body:
+            application/json:
+              example:
+                {
+                  userName: "jhon",
+                  email: "jhon123@gmail.com"
+                }

@@ -1,0 +1,25 @@
+#%RAML 1.0 Overlay
+extends:  craft2.raml
+documentation:
+  - title: Api documents 
+    content: this document is all about Spanish languge
+/products:
+  description: todos los productos
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {
+               "número de identificación": 12,
+               "precio": 4500,
+               "tipo de producto": "dell",
+               "sitio web": "ww.del.com"
+                
+              }
+          
+        
+  
+
+
